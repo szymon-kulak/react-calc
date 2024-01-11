@@ -23,7 +23,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50dvh;
+  min-height: 50dvh;
+  max-height: 50dvh;
   width: 50dvw;
   text-align: center;
   background-color: #23272f;
@@ -35,6 +36,7 @@ main {
   font-size: 3rem;
   color: #f6f7f9;
   text-shadow: 1px 1px black;
+  transition: ease-in-out 1s;
 }
 
 #results {
@@ -91,17 +93,28 @@ input[type=number] {
 @media (max-width: 1200px) {
   main {
     width: 90dvw;
-    height: 60dvh;
+    max-height: 60dvh;
   }
 }
 
 @media (max-width: 600px) {
   main {
     min-height: 60dvh;
+    max-height: 90dvh;
   }
 
   button, input, select {
     width: 90%;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-height: 600px) {
+  .react-logo {
+    visibility: hidden;
+  }
+
+  #title {
+    font-size: 2rem;
   }
 }
