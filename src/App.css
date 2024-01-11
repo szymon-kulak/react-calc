@@ -88,21 +88,20 @@ input[type=number] {
   appearance: textfield;
 }
 
-@media (max-aspect-ratio: 5/4) {
+@media (max-width: 1200px) {
   main {
     width: 90dvw;
     height: 60dvh;
   }
 }
 
-@media (max-aspect-ratio: 9/16) {
-  body {
-    background-color: #087ea4;
+@media (max-width: 600px) {
+  main {
+    min-height: 60dvh;
   }
-
-  
 
   button, input, select {
     width: 90%;
+    margin-bottom: 4px;
   }
 }
