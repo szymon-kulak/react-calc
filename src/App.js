@@ -59,7 +59,13 @@ class Calculator extends React.Component {
               <h1 id = "title">A Sexy React Calculator</h1>
               <div id = "results">{this.calcResults(this.state.num1, this.state.num2, this.state.calcType)}</div>
               <form id = "userInput">
-                  <input type="number" id="firstNum" value={this.state.num1} onChange={this.handleNum1}></input>
+                  <input 
+                  type="number" 
+                  id="firstNum" 
+                  value={this.state.num1} 
+                  onChange={this.handleNum1}
+                  inputMode="numeric"
+                  />
                   <select id="calcType" name="calcType" value={this.state.calcType} onChange={this.handleSelect}>
                       <option value="" selected disabled hidden></option>
                       <option value="add">+</option>
@@ -68,7 +74,13 @@ class Calculator extends React.Component {
                       <option value="divide">/</option>
                       <option value="modulo">%</option>
                   </select>
-                  <input type="number" id="secondNum" value={this.state.num2} onChange={this.handleNum2}></input>
+                  <input 
+                  type="number" 
+                  id="secondNum" 
+                  value={this.state.num2} 
+                  onChange={this.handleNum2}
+                  inputMode="numeric"
+                  />
               </form>
           </div>
       </main> 

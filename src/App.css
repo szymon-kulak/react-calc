@@ -87,3 +87,22 @@ input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+@media (max-aspect-ratio: 5/4) {
+  main {
+    width: 90dvw;
+    height: 60dvh;
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  body {
+    background-color: #087ea4;
+  }
+
+  
+
+  button, input, select {
+    width: 90%;
+  }
+}
